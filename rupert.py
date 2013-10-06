@@ -1,20 +1,47 @@
 from Rupert import Rupert
-from flask import Flask
-import time
+from flask import Flask, render_template
+import datetime
 
 app = Flask(__name__)
 rupert = Rupert()
 
 @app.route("/")
 def homepage():
-	return "Hello world!"
+	now = datetime.datetime.now()
+	timeString = now.strftime("%Y-%m-%d %H:%M")
 
-@app.route("/forward")
+	templateData = {
+		"title": "Rupert",
+		"time": timeString
+	}
+	return render_template('homepage.htm', **templateData)
+
+@app.route("/move_forward")
 def forward():
-	rupert.runForward(40,1)
-	return "Forward"
+	rupert.runForward(40, 1)
+	return "1"
+
+@app.route("/move_left")
+def left():
+	rupert.turnLeft(40, 0.5)
+	return "1"
+
+@app.route("/move_right")
+def right():
+	rupert.turnRight(40, 0.5)
+	return "1"
+
+@app.route("/move_backward")
+def backward():
+	rupert.runBackward(40, 1)
+	return "1"
+
+@app.route("/move_stop")
+def stop():
+	rupert.stopMotors()
+	return "1"
 
 if __name__ == "__main__":
-	app.run(host="0.0.0.0", port=81, debug=False)
+	app.run(host="0.0.0.0", port=81, debug=True)
 
 

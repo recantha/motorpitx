@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+	<head>
+		<title>{{ title }}</title>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<style type="text/css">
+			html { font-family: verdana, sans-serif }
+			.clear { clear: both; }
+			.title { font-size: 24pt; font-weight:bold; text-align: center;padding-bottom: 8px; }
+			.control-icon { width: 100%; max-width: 256px;}
+		</style>
+	</head>
+
+	<body>
+		<table cellpadding="2" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td>
+				</td>
+				<td class="title">
+					{{ title }}
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td width="33%">
+				</td>
+				<td width="33%">
+					<img src="/static/inc/img/icon-forward.png"  class="control-icon" direction="forward">
+				</td>
+				<td width="33%">
+				</td>
+			</tr>
+			<tr>
+				<td width="33%">
+					<img src="/static/inc/img/icon-left.png" class="control-icon" direction="left">
+				</td>
+				<td width="33%">
+					<img src="/static/inc/img/icon-stop.png" class="control-icon" direction="stop">
+				</td>
+				<td width="33%">
+					<img src="/static/inc/img/icon-right.png" class="control-icon" direction="right">
+				</td>
+			</tr>
+			<tr>
+				<td width="33%">
+				</td>
+				<td width="33%">
+					<img src="/static/inc/img/icon-backward.png" class="control-icon" direction="backward">
+				</td>
+				<td width="33%">
+				</td>
+			</tr>
+		</table>
+	</body>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.control-icon').click(function() {
+				var $icon = $(this);
+				var ajaxURL = '/move_' + $icon.attr('direction');
+
+				$icon.fadeTo('fast', 0.2, function() {
+					$.ajax({
+						url: ajaxURL,
+						complete: function() {
+							$icon.fadeTo('fast', 1);
+						}
+					})
+				})
+			})
+		})
+	</script>
+</html>
+

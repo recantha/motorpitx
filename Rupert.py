@@ -21,6 +21,8 @@ class Rupert:
 		self.stopMotor(self.motor2)
 	
 	def stopMotors(self):
+		if self.debug:
+			print "All stop"
 		self.stopMotor1()
 		self.stopMotor2()
 
@@ -34,18 +36,15 @@ class Rupert:
 		self.runMotor(self.motor1, speed, direction)
 	
 	def runMotor2(self, speed, direction):
-		print " - Running motor 2, speed " + str(speed) + ", direction " + str(direction)
+		if self.debug:
+			print " - Running motor 2, speed " + str(speed) + ", direction " + str(direction)
 		self.runMotor(self.motor2, speed, direction)
 	
 	def runMotorsTogether(self, speed, direction, duration):
 		self.runMotor1(speed, direction)
 		self.runMotor2(speed, direction)
-		print "waiting " + str(duration)
 		time.sleep(duration)
-		print "Stopping 1"
-		self.stopMotor1()
-		print "Stopping 2"
-		self.stopMotor2()
+		self.stopMotors()
 	
 	def runForward(self, speed, duration):
 		if self.debug:
