@@ -3,6 +3,7 @@ from flask import Flask
 import time
 
 app = Flask(__name__)
+rupert = Rupert()
 
 @app.route("/")
 def homepage():
@@ -10,7 +11,6 @@ def homepage():
 
 @app.route("/forward")
 def forward():
-	rupert = Rupert()
 	rupert.runForward(40,1)
 	return "Forward"
 
