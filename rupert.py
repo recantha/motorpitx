@@ -23,12 +23,12 @@ def forward():
 
 @app.route("/move_left")
 def left():
-	rupert.turnLeft(40, 0.5)
+	rupert.turnLeft(40, 0.2)
 	return "1"
 
 @app.route("/move_right")
 def right():
-	rupert.turnRight(40, 0.5)
+	rupert.turnRight(40, 0.2)
 	return "1"
 
 @app.route("/move_backward")
