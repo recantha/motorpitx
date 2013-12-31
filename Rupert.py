@@ -1,11 +1,15 @@
 #!/usr/bin/env python
 
-import motorpitx
+# MotorPiTX is in a convenient subfolder so insert that folder into the importable paths
+import sys
+sys.path.insert(0, 'MotorPiTX')
+from MotorPiTX import MotorPiTX
+
 import time
 
 class Rupert:
 	def __init__(self):
-		self.motorpitx = motorpitx
+		self.motorpitx = MotorPiTX()
 		self.motor1 = self.motorpitx.motor1
 		self.motor2 = self.motorpitx.motor2
 		self.debug = True
