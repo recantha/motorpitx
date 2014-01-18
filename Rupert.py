@@ -64,16 +64,16 @@ class Rupert:
 	def turnLeft(self, speed, duration):
 		if self.debug:
 			print "Turning left, speed " + str(speed) + " duration " + str(duration)
-		self.runMotor1(speed, 1)
-		self.runMotor2(speed, -1)
+		self.runMotor1(speed, -1)
+		self.runMotor2(speed, 1)
 		time.sleep(duration)
 		self.stopMotors()
 	
 	def turnRight(self, speed, duration):
 		if self.debug:
 			print "Turning right, speed " + str(speed) + " duration " + str(duration)
-		self.runMotor1(speed, -1)
-		self.runMotor2(speed, 1)
+		self.runMotor1(speed, 1)
+		self.runMotor2(speed, -1)
 		time.sleep(duration)
 		self.stopMotors()
 

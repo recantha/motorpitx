@@ -1,0 +1,63 @@
+ * Running on http://0.0.0.0:81/
+ * Restarting with reloader
+192.168.1.108 - - [18/Jan/2014 10:05:52] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [18/Jan/2014 10:05:52] "GET /static/inc/img/icon-forward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:05:52] "GET /static/inc/img/icon-left.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:05:52] "GET /static/inc/img/icon-stop.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:05:52] "GET /static/inc/img/icon-right.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:05:52] "GET /static/inc/img/icon-backward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:06:43] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [18/Jan/2014 10:06:43] "GET /static/inc/img/icon-forward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:06:43] "GET /static/inc/img/icon-left.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:06:43] "GET /static/inc/img/icon-stop.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:06:43] "GET /static/inc/img/icon-right.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:06:43] "GET /static/inc/img/icon-backward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:06:58] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [18/Jan/2014 10:06:58] "GET /static/inc/img/icon-forward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:06:58] "GET /static/inc/img/icon-left.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:06:58] "GET /static/inc/img/icon-stop.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:06:58] "GET /static/inc/img/icon-right.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:06:58] "GET /static/inc/img/icon-backward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:11] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [18/Jan/2014 10:13:11] "GET /static/inc/img/icon-forward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:11] "GET /static/inc/img/icon-left.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:11] "GET /static/inc/img/icon-stop.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:11] "GET /static/inc/img/icon-right.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:11] "GET /static/inc/img/icon-backward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:28] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [18/Jan/2014 10:13:28] "GET /static/inc/img/icon-forward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:28] "GET /static/inc/img/icon-left.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:28] "GET /static/inc/img/icon-stop.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:28] "GET /static/inc/img/icon-right.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:28] "GET /static/inc/img/icon-backward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:46] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [18/Jan/2014 10:13:47] "GET /static/inc/img/icon-forward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:47] "GET /static/inc/img/icon-left.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:47] "GET /static/inc/img/icon-stop.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:47] "GET /static/inc/img/icon-backward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:13:47] "GET /static/inc/img/icon-right.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:14:01] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [18/Jan/2014 10:14:01] "GET /static/inc/img/icon-forward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:14:01] "GET /static/inc/img/icon-left.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:14:01] "GET /static/inc/img/icon-stop.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:14:01] "GET /static/inc/img/icon-right.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:14:01] "GET /static/inc/img/icon-backward.png HTTP/1.1" 304 -
+192.168.1.108 - - [18/Jan/2014 10:14:38] "GET /move_fast-forward HTTP/1.1" 404 -
+192.168.1.108 - - [18/Jan/2014 10:14:41] "GET /move_forward HTTP/1.1" 200 -
+192.168.1.108 - - [18/Jan/2014 10:14:43] "GET /move_fast-forward HTTP/1.1" 404 -
+Setting up pins
+Controller website coming up on port 81
+Setting up pins
+Controller website coming up on port 81
+Running forward, speed 40 duration 1
+ - Running motor 1, speed 40, direction 1
+MOTORA is 9 MOTORB is 10
+Motor 1 moving (positive)
+ - Running motor 2, speed 40, direction 1
+MOTORA is 24 MOTORB is 23
+Motor 2 moving (positive)
+All stop
+MOTORA is 9 MOTORB is 10
+Motor 1 stopping
+MOTORA is 24 MOTORB is 23
+Motor 2 stopping

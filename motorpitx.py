@@ -234,3 +234,8 @@ def servo2(value):
 		
 def cleanup():
 	GPIO.cleanup()
+
+while True:
+	motor1(100)
+	motor2(100)
+

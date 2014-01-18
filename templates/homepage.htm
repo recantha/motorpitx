@@ -8,7 +8,8 @@
 			html { font-family: verdana, sans-serif }
 			.clear { clear: both; }
 			.title { font-size: 24pt; font-weight:bold; text-align: center;padding-bottom: 8px; }
-			.control-icon { width: 100%; max-width: 256px;}
+			.control-icon { width: 100%; max-width: 128px;}
+			td { text-align: center; }
 		</style>
 	</head>
 
@@ -16,12 +17,20 @@
 		<table cellpadding="2" cellspacing="0" border="0" width="100%">
 			<tr>
 				<td>
+
 				</td>
 				<td class="title">
 					{{ title }}
 				</td>
 				<td>
 				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<img src="/static/inc/img/icon-forward.png" class="control-icon" direction="fast-forward">
+				</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td width="33%">
@@ -51,6 +60,13 @@
 				</td>
 				<td width="33%">
 				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<img src="/static/inc/img/icon-backward.png" class="control-icon" direction="fast-backward">
+				</td>
+				<td></td>
 			</tr>
 		</table>
 	</body>

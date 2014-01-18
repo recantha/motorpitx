@@ -90,8 +90,12 @@ class MotorPiTX:
 		GPIO.output(self.READY, GPIO.HIGH)
 		sleep(1)
 
-	def _motor(self, MOTORA, MOTORB, value, motor_name):
+	def _motor(self, _MOTORA, _MOTORB, _MOTORPWM, value, motor_name):
 		Error = False
+
+		if self.DEBUG:
+			print "MOTORA is " + str(_MOTORA) + " MOTORB is " + str(_MOTORB)
+
 		try:
 			value = int(value)
 		except:
@@ -112,23 +116,23 @@ class MotorPiTX:
 			if value > 0:
 				if self.DEBUG:
 					print motor_name + " moving (positive)"
-				GPIO.output(MOTORA, GPIO.HIGH)
-				GPIO.output(MOTORB, GPIO.LOW)
-				self.MOTAPWM.ChangeDutyCycle(value)
+				GPIO.output(_MOTORA, GPIO.HIGH)
+				GPIO.output(_MOTORB, GPIO.LOW)
+				_MOTORPWM.ChangeDutyCycle(value)
 
 			elif value < 0:
 				if self.DEBUG:
 					print motor_name + " moving (negative)"
-				GPIO.output(MOTORA, GPIO.LOW)
-				GPIO.output(MOTORB, GPIO.HIGH)
-				self.MOTAPWM.ChangeDutyCycle(abs(value))
+				GPIO.output(_MOTORA, GPIO.LOW)
+				GPIO.output(_MOTORB, GPIO.HIGH)
+				_MOTORPWM.ChangeDutyCycle(abs(value))
 
 			else:
 				if self.DEBUG:
 					print motor_name + " stopping"
-				GPIO.output(MOTORA, GPIO.LOW)
-				GPIO.output(MOTORB, GPIO.LOW)
-				self.MOTAPWM.ChangeDutyCycle(0)
+				GPIO.output(_MOTORA, GPIO.LOW)
+				GPIO.output(_MOTORB, GPIO.LOW)
+				_MOTORPWM.ChangeDutyCycle(0)
 
 			return True
 
@@ -137,10 +141,10 @@ class MotorPiTX:
 	
 	# Control motor output number 1
 	def motor1(self, value):
-		return self._motor(self.MOTA1, self.MOTA2, value, "Motor 1")
+		return self._motor(self.MOTA1, self.MOTA2, self.MOTAPWM, value, "Motor 1")
 
 	def motor2(self, value):
-		return self._motor(self.MOTB1, self.MOTB2, value, "Motor 2")
+		return self._motor(self.MOTB1, self.MOTB2, self.MOTBPWM, value, "Motor 2")
 
 	def out1(self, value):
 		if value == True:
@@ -207,3 +211,10 @@ class MotorPiTX:
 
 	def cleanup():
 		GPIO.cleanup()
+
+
+if __name__ == '__main__':
+	motorpitx = MotorPiTX()
+	while True:
+		motorpitx.motor1(50)
+		motorpitx.motor2(50)
